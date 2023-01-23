@@ -1,3 +1,9 @@
+/*  PROG1400 - Intro to OOP
+    Assignment 01 - Fantasy Hockey League
+    Written by Meagan Townsend
+    01/23/2023
+ */
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -56,11 +62,15 @@ public class Team {
     }
     //endregion
 
+    //region Calculate Budget
+
     public void calculateBudget() {
         Random rand = new Random();
         budget = rand.nextInt(100000) + 0.00;
     }
+    //endregion
 
+    //region Calculate Rating
     public void calculateRating() {
         int total = goals + assists;
         if (total > 20) {
@@ -73,10 +83,13 @@ public class Team {
             rating = "0 stars";
         }
     }
+    //endregion
 
+    //region Team Details Output
     public void outputTeamDetails() {
         DecimalFormat df = new DecimalFormat("$#,###,##0.00");
         System.out.println(teamName + ":" +"\t" +  "G - " + goals + "\t" + " A - " + assists + "\t" + "Total - " + (goals + assists) +"\t" + " Budget - " + df.format(budget));
         System.out.println(" Rating: " + rating);
     }
+    //endregion
 }

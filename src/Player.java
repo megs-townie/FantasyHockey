@@ -1,3 +1,9 @@
+/*  PROG1400 - Intro to OOP
+    Assignment 01 - Fantasy Hockey League
+    Written by Meagan Townsend
+    01/23/2023
+ */
+
 public class Player {
 
 //region Class Properties
@@ -38,7 +44,7 @@ public class Player {
     }
     //endregion
 
-    //region Player Stat output
+    //region Player Stat Output
     public void outputPlayerDetails() {
         System.out.println(teamName + "\n" + name + "\t" + ": G - " + goals + "\t" + " A - " + assists + "\t" + " Total - " + getTotal());
     }
